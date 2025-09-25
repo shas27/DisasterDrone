@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Disaster Management Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome & Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Leaflet CSS for free map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Custom Styles -->
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="navbar-brand">
+            <img src="logo.png" alt="Logo" />
+            <h3>Drone Control</h3>
+        </div>
+        <div class="user-profile">
+            <img src="rino.jpeg" alt="User Profile" />
+            <div>
+                <h6>Rino Shajan</h6>
+                <small>Operator</small>
+            </div>
+        </div>
+        <nav>
+            <a href="#" class="active" style="color:#009cff; text-decoration:none; font-weight:600;">
+                <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+            </a>
+        </nav>
+    </div>
+
+    <button class="sidebar-toggler" aria-label="Toggle Sidebar">&#9776;</button>
+
+    <div class="content">
+        <nav class="navbar">
+            <div>Disaster Management Drone Dashboard</div>
+            <div>
+                <img class="rounded-circle" src="rino.jpeg" alt="User" style="width:40px; height:40px; margin-right: 0.5rem;" />
+                Rino Shajan
+            </div>
+        </nav>
+
+        <div class="map-container" id="map"></div>
+
+        <div class="dashboard-panels">
+            <div class="panel" id="drone-status">
+                <h6>Drone Telemetry</h6>
+                <p><strong>Altitude:</strong> 120 m</p>
+                <p><strong>Speed:</strong> 35 km/h</p>
+                <p><strong>Battery:</strong> 78%</p>
+                <p><strong>Payload Weight:</strong> 2.5 kg</p>
+                <button class="btn btn-primary" id="emergency-land-btn">Emergency Land</button>
+            </div>
+            <div class="panel" id="payload-info">
+                <h6>Payload Information</h6>
+                <p><strong>Type:</strong> Medical Supplies</p>
+                <p><strong>Serial Number:</strong> MS-2025-09</p>
+                <p><strong>Status:</strong> En route</p>
+                <button class="btn btn-primary" id="deploy-payload-btn">Deploy Payload</button>
+            </div>
+            <div class="panel" id="live-feed">
+                <h6>Live Camera Feed</h6>
+                <img src="live.jpg" alt="Live Camera Feed" />
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
